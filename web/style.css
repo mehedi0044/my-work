@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a; /* Deep dark blue */
+    overflow: hidden;
+}
+
+/* Colorful blobs behind the glass */
+.background-blobs .blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    filter: blur(80px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.blob:nth-child(1) { top: 10%; left: 20%; }
+.blob:nth-child(2) { bottom: 10%; right: 20%; background: #ec4899; }
+
+/* The Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.content {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-item h3 {
+    color: #3b82f6;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.about-item p {
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+.skills-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+    font-size: 0.9rem;
+}
+
+.glass-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
